@@ -29,6 +29,7 @@ def handle_files(args):
     file_path = os.path.join(directory, f'{file_name}.json')
     return file_path, file_name
 
+
 def pass_arguments_to_data_gen_assistant(args):
     """
     Create command line interface function that passes the args to the 
