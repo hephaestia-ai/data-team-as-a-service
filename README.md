@@ -10,19 +10,19 @@ Assistants
 
 The repository currently features two assistants:
 
-	1.	Data Generation Assistant:
-	•	This assistant is nearly 95% deterministic and can generate any data from a simple prompt passed through the CLI.
-	•	The output is structured as a pandas DataFrame.
-	2.	Dev-Ops Assistant:
-	•	This assistant recursively searches a given directory and adds in-line comments to every single .py file, preserving the original structure of the code.
+	+ Data Generation Assistant:
+        + This assistant is nearly 95% deterministic and can generate any data from a simple prompt passed through the CLI.
+	    + The output is structured as a pandas DataFrame.
+	+ Dev-Ops Assistant:
+        + This assistant recursively searches a given directory and adds in-line comments to every single .py file, preserving the original structure of the code.
 
 Future Development
 
 The next planned assistant will:
 
-	•	Recursively read any SQL and create a suite of DBMS constraint checks.
-	•	Infer the business logic and cardinality from the SQL.
+	+ Recursively read any SQL and create a suite of DBMS constraint checks.
+	+ Infer the business logic and cardinality from the SQL.
 
 Note: The code for the next assistant might not be made publicly available.
 
-Feel free to explore, contribute, and provide feedback! 
+Feel free to explore, contribute, ask questions and provide feedback! 
