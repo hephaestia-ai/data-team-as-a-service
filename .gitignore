@@ -1,0 +1,10 @@
+.venv
+.vscode
+.idea
+
+**/__pycache__
+.DS_Store
+.pytest_cache
+
+
+assistants.egg-info

@@ -1,0 +1,34 @@
+{
+    "plants": [
+        {
+            "name": "Fiddle Leaf Fig",
+            "origin": "Western Africa",
+            "light": "Bright, indirect",
+            "water": "Moderate"
+        },
+        {
+            "name": "Snake Plant",
+            "origin": "West Africa",
+            "light": "Low to bright, indirect",
+            "water": "Low"
+        },
+        {
+            "name": "Monstera Deliciosa",
+            "origin": "Tropical Americas",
+            "light": "Bright, indirect",
+            "water": "Moderate"
+        },
+        {
+            "name": "Spider Plant",
+            "origin": "Tropical and Southern Africa",
+            "light": "Bright, indirect",
+            "water": "Moderate"
+        },
+        {
+            "name": "Peace Lily",
+            "origin": "Tropical Americas",
+            "light": "Low to moderate",
+            "water": "High"
+        }
+    ]
+}
