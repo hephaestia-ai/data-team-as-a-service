@@ -1,8 +1,28 @@
-# Assistants 
+# Data Team as a Service
 
-This repo contains Data Engineering & Analytics AI assistants constructed using the Open AI API and python library. 
+Welcome to the Earlywine-Data-Co/data-team-as-a-service repository!
 
-Currently the parent folder, 'core' contains the parent 'CoreAssitant' class which is intended to be a base reference 
-for the nasenct 'assistants' sub-directory. CoreAssistant currently only makes a basic API call and returns chat completions messages and metadata. 
+Project Overview: Data Team As A Service (DTAAS)
 
-The assistants sub-directory passes more context to the parent class and also contains assistant-specific data cleaning operations. For example, the current DataGenerationAssistant() outputs results as a pandas dataframe object. I am leaving this more of a loose definition for now. 
+This repository houses the prototype project Data Team As A Service (DTAAS), developed using the OpenAI API library. The goal of DTAAS is to streamline and automate some of the more repetitive tasks that data analysts and data engineers typically face. Tasks like writing basic data quality checks for 500+ tables, scraping websites for detailed information, or even generating lower-level code comments. Ambitiously, the ultimate goal is to use AI to handle the dev-ops side of data engineering.
+
+Assistants
+
+The repository currently features two assistants:
+
+	1.	Data Generation Assistant:
+	•	This assistant is nearly 95% deterministic and can generate any data from a simple prompt passed through the CLI.
+	•	The output is structured as a pandas DataFrame.
+	2.	Dev-Ops Assistant:
+	•	This assistant recursively searches a given directory and adds in-line comments to every single .py file, preserving the original structure of the code.
+
+Future Development
+
+The next planned assistant will:
+
+	•	Recursively read any SQL and create a suite of DBMS constraint checks.
+	•	Infer the business logic and cardinality from the SQL.
+
+Note: The code for the next assistant might not be made publicly available.
+
+Feel free to explore, contribute, and provide feedback! 
