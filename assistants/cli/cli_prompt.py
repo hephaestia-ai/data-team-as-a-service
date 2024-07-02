@@ -1,3 +1,4 @@
+            
 from assistants.data_generation_assistant import DataGenerationAssistant
 import argparse 
 import logging
@@ -8,20 +9,12 @@ import pandas as pd
 logging.basicConfig(level=logging.INFO, datefmt="%Y-%m-%d", format="%(levelname)s - %(asctime)s - %(message)s")
 
 def handle_underscores(args):
-    """
-    Utility function to replace GPT prompt string with 
-    underscores to automate loading to biguqery 
-    """
-
+    # Utility function to replace spaces in the passed prompt string with underscores
     return args.replace(' ', '_')
 
 
 def handle_files(args):
-    """
-    Checks to see if output mnt/data sub-dir exists, 
-    then joins to file path and cleans the prompt passed via CLI
-    """
-
+    # Checks if output directory exists, creates if not, then joins prompt to file path 
     directory = 'mnt/data/'
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -31,16 +24,7 @@ def handle_files(args):
 
 
 def pass_arguments_to_data_gen_assistant(args):
-    """
-    Create command line interface function that passes the args to the 
-    DataGenerationAssistant class
-
-    We're using OpenAI's response format output because bigquery has the ability 
-    to read a json object directly. 
-
-    prompt --run='5 indoor houseplants'
-    """
-
+    # Command line interface function to pass arguments to DataGenerationAssistant class and save output as JSON 
     file_path, file_name = handle_files(args)
 
     assistant = DataGenerationAssistant()
@@ -53,19 +37,8 @@ def pass_arguments_to_data_gen_assistant(args):
 
 
 def run():
-    """
-    Parses a prompt from the CLI to a data generation assistant.
-     
-    Usage::
-        
-        % prompt --run='5 indoor houseplants'
-
-    """
-
-    # Establish initial parser object
+    # Parses a prompt from the CLI to the data generation assistant
     parser = argparse.ArgumentParser(description="Pass prompt through the command line to a specific assistant")
     parser.add_argument('-r', '--run', type=str, help='Write the shortened prompt to pass')
-    # Initialize 'args' with the arguments established in step 2
-    # Pass as parameter to the DataGenerationAssistant 
     args = parser.parse_args()
     pass_arguments_to_data_gen_assistant(args)

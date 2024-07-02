@@ -1,14 +1,7 @@
-""" 
-Create an assistant data type object for reusability purposes and ongoing development
-TODO: add logging
-TODO: potentially break these a part by model / use case? 
-TODO: add function call parameter
-"""
-
 from core.assistant_type import AssistantType
 import logging 
 
-logging.basicConfig(level=logging.INFO, datefmt='%Y-%m-%d', format='%(levelname)s - %(asctime)s - %(message)s')
+logging.basicConfig(level=logging.INFO, datefmt='%Y-%m-%d', format='%(levelname)s - %(message)s')
 
 class CoreAssistant(AssistantType):
     """
@@ -32,20 +25,21 @@ class CoreAssistant(AssistantType):
     """
 
     def __init__(self):
-        super().__init__() # Initializes AssistantType Parent Class, allows for dynamic role selection
+        # Initializes AssistantType Parent Class, allows for dynamic role selection
+        super().__init__() 
         from openai import OpenAI
 
-        self.gpt_client = OpenAI()
-        self.gpt_model = "gpt-4-turbo"
-        self.temperature = 0.02
-        self.max_tokens = 210
-        self.response_format={"type": "json_object"}
-        self.seed=1
+        self.gpt_client = OpenAI()  # Setting up the OpenAI client instance
+        self.gpt_model = "gpt-4-turbo"  # GPT model specification
+        self.temperature = 0.02  # Model temperature for response variability
+        self.max_tokens = 210  # Maximum tokens per response
+        self.response_format={"type": "json_object"}  # Response format configuration
+        self.seed=1  # Seed value for deterministic outputs
 
     def _parse_usage_stats(self, request):
         """
-        Helper method designed to assist with parsing usage stats from the Open AI API response
-        Not intended for public use
+        Helper method designed to assist with parsing usage stats from the Open AI API response.
+        Not intended for public use.
         """
         sys_fingerprint = request.system_fingerprint
         
@@ -77,6 +71,7 @@ class CoreAssistant(AssistantType):
         -----
         """
 
+        # Send a request to the OpenAI GPT model using chat completion
         chat_completion = self.gpt_client.chat.completions.create(
             messages=[
                 {"role": "system", "content": f"you are a helpful {assistant_type} assistant"},
@@ -94,7 +89,7 @@ class CoreAssistant(AssistantType):
 
     def get_response(self, request):
         """
-        Passes the chat completions request through the class message access point
+        Passes the chat completions request through the class message access point.
         The request parameter being all OpenAI related details such as token cost, 
         deterministic UUID etc.
         
@@ -106,10 +101,9 @@ class CoreAssistant(AssistantType):
         # Parse usage stats for information
         self._parse_usage_stats(request)
 
-        # Process and return message content
+        # Process and return message content from request choices
         response = request.choices[0].message.content
         return response
 
 if __name__ == "__main__":
     CoreAssistant()
-

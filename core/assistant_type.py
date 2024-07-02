@@ -1,9 +1,4 @@
-""" 
-Assistant Types to pass into the Core Assistant Class
-"""
-
-
-class AssistantType:
+class AssistantType: 
     """ 
     Assistant Type 
     --------------
@@ -14,9 +9,11 @@ class AssistantType:
     -----
     """
     def __init__(self): 
+        # Initialize different types of assistant roles
         self.data_engineer = 'data engineer'
+        # Role for data quality related interactions
         self.data_quality_engineer = 'data quality engineer'
+        # Role for data analysis related interactions
         self.data_analyst = 'data analyst'
+        # Role for dev ops related interactions
         self.dev_ops_engineer = 'dev ops engineer'
-
-
