@@ -6,23 +6,25 @@ Project Overview: Data Team As A Service (DTAAS)
 
 This repository houses the prototype project Data Team As A Service (DTAAS), developed using the OpenAI API library. The goal of DTAAS is to streamline and automate some of the more repetitive tasks that data analysts and data engineers typically face. Tasks like writing basic data quality checks for 500+ tables, scraping websites for detailed information, or even generating lower-level code comments. Ambitiously, the ultimate goal is to use AI to handle the dev-ops side of data engineering.
 
-Assistants
+### Assistants
 
 The repository currently features two assistants:
 
-	+ Data Generation Assistant:
-        + This assistant is nearly 95% deterministic and can generate any data from a simple prompt passed through the CLI.
-	    + The output is structured as a pandas DataFrame.
-	+ Dev-Ops Assistant:
-        + This assistant recursively searches a given directory and adds in-line comments to every single .py file, preserving the original structure of the code.
 
-Future Development
++ Data Generation Assistant:
+    + This assistant is nearly 95% deterministic and can generate any data from a simple prompt passed through the CLI.
+    + The output is structured as a pandas DataFrame.
++ Dev-Ops Assistant:
+    + This assistant recursively searches a given directory and adds in-line comments to every single .py file, preserving the original structure of the code.
+
+_Future Development_
 
 The next planned assistant will:
 
-	+ Recursively read any SQL and create a suite of DBMS constraint checks.
-	+ Infer the business logic and cardinality from the SQL.
++ Recursively read any SQL and create a suite of DBMS constraint checks.
++ Infer the business logic and cardinality from the SQL.
+
+
 
 Note: The code for the next assistant might not be made publicly available.
-
 Feel free to explore, contribute, ask questions and provide feedback! 
