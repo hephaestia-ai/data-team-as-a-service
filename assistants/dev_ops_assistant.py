@@ -70,7 +70,9 @@ class DevOpsAssistant(CoreAssistant):
                     with open(file_path, 'w') as f:
                         f.write(commented_code)
 
-# Create an instance of DevOpsAssistant and process code in the specified directory
-assistant = DevOpsAssistant()
-directory = './core'
-assistant.process_code(directory)
+if __name__=="__main__":
+    DevOpsAssistant()
+    # Create an instance of DevOpsAssistant and process code in the specified directory
+    # assistant = DevOpsAssistant()
+    # directory = './core'
+    # assistant.process_code(directory)
