@@ -14,9 +14,9 @@ class AssistantType:
     -----
     """
     def __init__(self): 
-
         self.data_engineer = 'data engineer'
         self.data_quality_engineer = 'data quality engineer'
         self.data_analyst = 'data analyst'
+        self.dev_ops_engineer = 'dev ops engineer'
 
 

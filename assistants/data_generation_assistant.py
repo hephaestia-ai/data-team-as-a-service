@@ -1,5 +1,4 @@
 from core.core_assistant import CoreAssistant
-from core.assistant_type import AssistantType
 import re
 import logging 
 
