@@ -1,6 +1,13 @@
-# Data Team as a Service
+# Data Team as a Service (Taster)
 
-Welcome to the Earlywine-Data-Co/data-team-as-a-service repository!
+Welcome to the Earlywine-Data-Co/data-team-as-a-service *taster* repository!
+
+Yep - you guessed it. There's more to come. While the Grapes are fermenting, we thought we'd leave the open source community with a few things to focus on. 
+
+1. data generation and metadata enrichment is not that hard with the right question
+2. code commenting can be automated, for everything. 
+
+Where this is going...
 
 Project Overview: Data Team As A Service (DTAAS)
 
